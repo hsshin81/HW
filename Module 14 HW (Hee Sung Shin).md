@@ -166,13 +166,24 @@ X-XSS-Protection: 1; mode=block
 
 21. What is the response status code?
 
+    _200_
+
 22. What web server is handling this HTTP response?
+
+    _Apache_
 
 23. Does this response have a user session associated to it?
 
+    _Yes_ `Set-Cookie: SessionID=5`
+
 24. What kind of content is likely to be in the [page content] response body?
 
+    _Some sort of HTML text_
+
 25. If your class covered security headers, what security request headers have been included?
+
+    _HTTPS_ `Strict-Transport-Security`<br>
+    _Cross script protection_ `X-XSS-Protection: 1; mode=block`
 
 #### Monoliths and Microservices
 
@@ -180,9 +191,15 @@ Answer the following questions about monoliths and microservices:
 
 26. What are the individual components of microservices called?
 
+    _Services_
+
 27. What is a service that writes to a database and communicates to other services?
 
+    _API_
+
 28. What type of underlying technology allows for microservices to become scalable and have redundancy?
+
+    _Load balancer_
 
 #### Deploying and Testing a Container Set
 
@@ -190,15 +207,28 @@ Answer the following questions about multi-container deployment:
 
 29. What tool can be used to deploy multiple containers at once?
 
+    _Docker_
+
 30. What kind of file format is required for us to deploy a container set?
+
+    _YAML_
 
 #### Databases
 
 31. Which type of SQL query would we use to see all of the information within a table called `customers`?
 
+    `SELECT * FROM customers;`
+
 32. Which type of SQL query would we use to enter new data into a table? (You don't need a full query, just the first part of the statement.)
 
+    ```
+    INSERT INTO customers (column1, column2)
+    VALUES (item1, item2);
+    ```
+
 33. Why would we never run `DELETE FROM <table-name>;` by itself?
+
+    _That would delete the entire table._
 
 ---
 
