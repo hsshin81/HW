@@ -35,7 +35,7 @@ Answer the following questions about the HTTP request and response process.
 
 5. Which number class of status codes represents errors?
 
-    _400_
+    _400 and 500_
 
 6. What are the two most common request methods that a security professional will encounter?
 
@@ -95,6 +95,9 @@ Answer the following questions about sessions and cookies:
     Content-type: text/html
     Set-Cookie: cart=Bob
     ```
+    ```
+    Set-Cookie: cart=Bob
+    ```
 
 16. Which request header will continue the client's session?
 
@@ -103,7 +106,9 @@ Answer the following questions about sessions and cookies:
     Host: www.example.org
     Cookie: cart=Bob
     ```
-
+    ```
+    Cookie: cart=Bob
+    ```
 #### Example HTTP Requests and Responses
 
 Look through the following example HTTP request and response and answer the following questions:
