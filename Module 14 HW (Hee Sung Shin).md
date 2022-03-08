@@ -400,17 +400,22 @@ Note that each one of these is a cookie that was granted to Ryan after logging i
 1. Craft a new `curl` command that now uses the `--cookie` option, followed by the path to your cookies file. For the URL, use `http://localhost:8080/wp-admin/index.php`.
 
    - **Question:** Is it obvious that we can access the Dashboard? (Y/N)
-   - 
+   - `curl --cookie ./ryancookies.txt http://localhost:8080/wp-admin/index.php`
+   - The HTML returned seems like it could be from the dashboard page.
 
 2. Press the up arrow on your keyboard to run the same command, but this time, pipe `| grep Dashboard` to the end of your command to return all instances of the word `Dashboard` on the page.
 
     - **Question:**  Look through the output where `Dashboard` is highlighted. Does any of the wording on this page seem familiar? (Y/N) If so, you should be successfully logged in to your Editor's dashboard.
+    - **YES**
+    - `<p>Welcome to your WordPress Dashboard! This is the screen you will see when you log in to your site, and gives you access to all the site management features of WordPress. You can get help for any screen by clicking the Help tab above the screen title.</p>`
 
 #### Step 5: Test the Users.php Page
 
 1. Finally, write a `curl` command using the same `--cookie ryancookies.txt` option, but attempt to access `http://localhost:8080/wp-admin/users.php`.
 
     - **Question:** What happens this time?
+    - **The HTML response is the same as what we saw in the browser in Step 2 Question 3.
+    - `<p><h1>Cheatin&#8217; uh?</h1><p>Sorry, you are not allowed to browse users.</p></p>`
 
 ---
 
