@@ -110,11 +110,20 @@ username=Barbara&password=password
 
 17. What is the request method?
 
+    _POST_
+
 18. Which header expresses the client's preference for an encrypted response?
+
+    _Upgrade-Insecure-Requests: 1_
 
 19. Does the request have a user session associated with it?
 
+    _Connection: keep-alive_
+    _This tells the server to keep the session alive._
+
 20. What kind of data is being sent from this request body?
+
+    _Username and password_
 
 **HTTP Response**
 
